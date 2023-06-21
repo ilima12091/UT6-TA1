@@ -3,6 +3,8 @@ import { RefresherCustomEvent } from '@ionic/angular';
 import { MessageComponent } from '../message/message.component';
 
 import { DataService, Message } from '../services/data.service';
+import { CardsService } from '../services/cards-service.service';
+import { Card } from '../interfaces/card';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,13 @@ import { DataService, Message } from '../services/data.service';
 })
 export class HomePage {
   private data = inject(DataService);
-  constructor() {}
+  private cardsService = inject(CardsService);
+
+  cards: Card[] = [];
+
+  constructor() {
+    this.cardsService.getAllCards().then((data) => (this.cards = data));
+  }
 
   refresh(ev: any) {
     setTimeout(() => {

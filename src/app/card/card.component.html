@@ -1,0 +1,14 @@
+<ion-card>
+  <img
+    [alt]="card.title"
+    [src]="moviesImagesBaseUrl + card.movieImageUrl"
+    class="card-image"
+  />
+  <ion-card-header>
+    <ion-card-title>{{ card.title }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{ card.description }}
+  </ion-card-content>
+</ion-card>
