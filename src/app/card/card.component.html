@@ -1,4 +1,4 @@
-<ion-card>
+<ion-card class="card">
   <img
     [alt]="card.title"
     [src]="moviesImagesBaseUrl + card.movieImageUrl"
@@ -11,4 +11,7 @@
   <ion-card-content>
     {{ card.description }}
   </ion-card-content>
+  <ion-button shape="round" (click)="setCardToEdit(card)">
+    <ion-icon name="pencil"></ion-icon>
+  </ion-button>
 </ion-card>

@@ -1,0 +1,46 @@
+<ion-content>
+  <form
+    [formGroup]="creationForm"
+    class="card-creation-form"
+    (submit)="submitCard()"
+  >
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-input
+            label="Title"
+            labelPlacement="floating"
+            placeholder="Enter title"
+            formControlName="title"
+          />
+          <ion-input
+            label="Description"
+            labelPlacement="floating"
+            placeholder="Enter description"
+            formControlName="description"
+          />
+          <ion-select
+            label="Movie"
+            label-placement="floating"
+            placeholder="Select a movie"
+            formControlName="movieImageUrl"
+            interface="popover"
+          >
+            <ion-select-option
+              *ngFor="let movie of movies"
+              [value]="movie.id + '|' + movie.poster_path"
+            >
+              {{ movie.title }}</ion-select-option
+            >
+          </ion-select>
+        </ion-col>
+        <ion-col class="card-creation-buttons" no-padding>
+          <ion-button color="danger" (click)="closeModal()">Cancel</ion-button>
+          <ion-button type="submit">
+            {{ card ? "Save changes" : "Create card" }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

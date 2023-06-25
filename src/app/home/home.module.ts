@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MessageComponentModule } from '../message/message.module';
 import { CardComponentModule } from '../card/card.module';
+import { CardCreationFormComponentModule } from '../card-creation-form/card-creation-form.module';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { CardComponentModule } from '../card/card.module';
     MessageComponentModule,
     HomePageRoutingModule,
     CardComponentModule,
+    CardCreationFormComponentModule,
   ],
   declarations: [HomePage],
 })

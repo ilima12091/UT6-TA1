@@ -1,0 +1,15 @@
+.card-creation {
+  &-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    ion-grid {
+      margin-inline: 0;
+    }
+  }
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}

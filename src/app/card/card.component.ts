@@ -8,6 +8,7 @@ import { Card } from '../interfaces/card';
 })
 export class CardComponent implements OnInit {
   @Input() card!: Card;
+  @Input() setCardToEdit!: (card: Card) => void;
   moviesImagesBaseUrl: string = 'https://image.tmdb.org/t/p/w500';
   isEdittingModeEnabled: boolean = false;
 

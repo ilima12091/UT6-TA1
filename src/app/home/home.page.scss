@@ -8,6 +8,10 @@
   grid-template-columns: repeat(auto-fit, 300px);
 }
 
+ion-fab-button {
+  margin: 1rem;
+}
+
 @media (max-width: 600px) {
   .cards {
     grid-template-columns: repeat(auto-fit, 100%);
