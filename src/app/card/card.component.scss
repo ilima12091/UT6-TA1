@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  &-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+  ion-button {
+    align-self: flex-end;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    height: 40px;
+    width: 40px;
+  }
+  &-edit-button {
+    margin: 0px 1rem 1rem 0px;
+  }
+  &-delete-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}

@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MessageComponentModule } from '../message/message.module';
+import { CardComponentModule } from '../card/card.module';
+import { CardCreationFormComponentModule } from '../card-creation-form/card-creation-form.module';
 
 @NgModule({
   imports: [
@@ -12,8 +14,10 @@ import { MessageComponentModule } from '../message/message.module';
     FormsModule,
     IonicModule,
     MessageComponentModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    CardComponentModule,
+    CardCreationFormComponentModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}

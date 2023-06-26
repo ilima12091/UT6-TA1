@@ -1,0 +1,29 @@
+<ion-card class="card">
+  <img
+    [alt]="card.title"
+    [src]="moviesImagesBaseUrl + card.movieImageUrl"
+    class="card-image"
+  />
+  <ion-card-header>
+    <ion-card-title>{{ card.title }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    {{ card.description }}
+  </ion-card-content>
+  <ion-button
+    class="card-delete-button"
+    color="danger"
+    shape="round"
+    (click)="deleteCard()"
+  >
+    <ion-icon name="trash-outline"></ion-icon>
+  </ion-button>
+  <ion-button
+    class="card-edit-button"
+    shape="round"
+    (click)="setCardToEdit(card)"
+  >
+    <ion-icon name="pencil"></ion-icon>
+  </ion-button>
+</ion-card>
